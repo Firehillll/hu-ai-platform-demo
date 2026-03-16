@@ -76,9 +76,7 @@ class TestChatEndpoint:
         """Dutch input should be detected."""
         response = client.post(
             "/api/v1/chat",
-            json={
-                "message": "Wat is de opleiding voor AI bij Hogeschool Utrecht?"
-            },
+            json={"message": "Wat is de opleiding voor AI bij Hogeschool Utrecht?"},
         )
         assert response.status_code == 200
         data = response.json()
